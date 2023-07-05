@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><personal-portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" class="logo" width="100px"> 
+                <ul>
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>About</li>
+                    <li><a href="#"></a>Services</li>
+                    <li><a href="#"></a>portfolio</li>
+                    <li><a href="#"></a>Contact</li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web developer</p>
+                <h1>Hi, I'm <span>Sonu</span> yadav<br> from India</h1>
+            </div>
+
+        </div>
+    </div>
+    <!----------about-------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="About-col-1">
+                    <img src="images/user.jpeg" alt="" width="400px"  height="400px">
+
+                </div>
+                <div class="About-col-2">
+                    <h1 class="sub-title">About me!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quam suscipit atque! Soluta id ratione quae cumque voluptatem. Dicta unde aspernatur veritatis ipsam officiis culpa, eveniet enim eos iusto at.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Eduction')">Eduction</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br> Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023 - curreent</span><br>web Designing</li>
+                            <li><span>2019 - 2021</span><br> Team lead at starapp llc.</li>
+                            <li><span>2017 - 2019</span><br>UI/UX Designing</li>
+                            <li><span>2016 - 2027</span><br> internship at ekart</li>
+                            
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="Eduction">
+                        <ul>
+                            <li><span>2022 </span><br>B-tech css in LPU</li>
+                            <li><span>2019 - 2021</span><br>12th</li>
+                            <li><span>2017 - 2019</span><br>10th</li>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tabcontents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
